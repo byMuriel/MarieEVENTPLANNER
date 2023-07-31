@@ -1,0 +1,310 @@
+/* Importa la fuente desde Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap');
+
+/*Para que todos los contenedores se ajusten al tamano 
+especificado a pesar de los border, paddings y 
+margins*/
+* {
+    box-sizing: border-box;
+    font-family: 'Cormorant Garamond', serif;
+}
+
+/*Estilos a ser aplicados a lo largo de todo el Body*/
+body {
+    margin: 0;
+    background-color: rgb(245, 245, 245);
+}
+
+/*Estilos para la Cabecera*/
+header {
+    background-image: url(../assets/images/flores.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+    color: rgb(70, 69, 70);
+    padding: 2px;
+    height: 42rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fondoLogoP {
+    width: 100%;
+    height: 5rem;
+}
+
+.fondoLogo {
+    position: relative;
+    width: 100%;
+    height: 42rem;
+    animation: zoom 8s infinite alternate;
+}
+
+/* Animación */
+@keyframes zoom {
+    0% {
+        background-size: 100%;
+    }
+
+    50% {
+        background-size: 105%;
+    }
+
+    100% {
+        background-size: 100%;
+    }
+}
+
+h1 {
+    font-size: 1.8rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+#logo_princ {
+    width: 30rem;
+    height: auto;
+}
+
+#logo_princP {
+    width: 10rem;
+    height: auto;
+}
+
+.navbar {
+    margin: 0;
+    padding: 0;
+    box-shadow: 2px 2px 4px rgba(27, 26, 26, 0.5);
+}
+
+/*Estilos para la Barra de Navegacion*/
+.navegacion {
+    display: flex;
+    background-color: rgb(108, 68, 96);
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar-nav {
+    display: flex;
+    flex-direction: column;
+    /* Cambiamos la dirección a columna */
+    align-items: center;
+    /* Centramos los elementos horizontalmente */
+    justify-content: center;
+    /* Centramos los elementos verticalmente */
+    margin: 0;
+    padding: 0;
+}
+
+.nav-item {
+    width: 100%;
+    /* Ocupan todo el ancho disponible */
+    text-align: center;
+    /* Centramos el texto horizontalmente */
+}
+
+.anchorNavegacion {
+    color: rgb(245, 245, 245);
+    margin: 0;
+    padding: 1rem 15rem 1rem 15rem;
+    text-decoration: none;
+    border: 0;
+    z-index: 1000;
+}
+
+.anchorNavegacion:hover,
+.anchorNavegacion:focus {
+    background-color: rgb(246, 231, 231);
+    color: rgb(41, 41, 41);
+    border-radius: 5px;
+    text-decoration: none;
+    box-shadow: 2px 2px 4px rgba(27, 26, 26, 0.5);
+}
+
+/* Estilos para los enlaces cuando están activos */
+.anchorNavegacion:active {
+    background-color: white;
+    color: rgb(41, 41, 41);
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.ocultar {
+    display: none;
+}
+
+.ver {
+    display: flex;
+}
+
+.redes {
+    width: 2rem;
+    height: auto;
+    transition: transform 0.2s ease;
+}
+
+.redes:hover {
+    transform: scale(1.2);
+}
+
+.piePagina {
+    background-color: #715C72;
+    color: antiquewhite;
+}
+
+.linksPie {
+    width: 5rem;
+    color: rgb(206, 205, 203);
+    text-decoration: none;
+}
+
+.linksPie:hover {
+    color: black;
+}
+
+.enfasis {
+    color: rgb(255, 255, 255);
+    font-size: 1rem;
+}
+
+.labelFormulario {
+    font-size: 1.2rem;
+    color: #282328;
+}
+
+.formTarjeta {
+    background-color: white;
+    padding: 2rem;
+    margin: 1.5rem;
+    border-radius: 1.5rem;
+}
+
+.helpTxt {
+    color: rgb(238, 6, 6);
+}
+
+.contTarjeta {
+    background-color: white;
+    color: #282328;
+    padding: 2rem;
+    margin: 2rem 0 2rem 1rem;
+    border-radius: 1.5rem;
+}
+
+.botonesCont {
+    width: 100%;
+    padding: 0;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.botCont {
+    width: 15rem;
+    height: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    background-color: rgb(243, 239, 239);
+    border-radius: 1.5rem;
+    margin: 2rem 0 2rem 0;
+    transition: width 0.3s ease;
+    transition: padding 0.3s ease;
+}
+
+.botText {
+    width: 15rem;
+    height: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1.5rem;
+    color: #282328;
+    text-decoration: none;
+    font-size: 1.5rem;
+    background-color: rgba(255, 255, 255, 0.3);
+    transition: font-size 0.3s ease;
+}
+
+/* Imágenes de fondo para cada <li> cuando se hace hover usando :nth-child() */
+.botCont:first-child:hover {
+    width: 15rem;
+    height: 4rem;
+    padding: 1rem;
+    background-image: url(../assets/images/fireworks.jpg);
+}
+
+.botCont:nth-child(2):hover {
+    width: 15rem;
+    height: 4rem;
+    padding: 1rem;
+    background-image: url(../assets/images/conferencia.jpg);
+}
+
+.botCont:nth-child(3):hover {
+    width: 15rem;
+    height: 4rem;
+    padding: 1rem;
+    background-image: url(../assets/images/florBoda.jpg);
+}
+
+.botCont:nth-child(4):hover {
+    width: 15rem;
+    height: 4rem;
+    padding: 1rem;
+    background-image: url(../assets/images/eventosSociales.jpg);
+}
+
+.botCont:nth-child(5):hover {
+    width: 15rem;
+    height: 4rem;
+    padding: 1rem;
+    background-image: url(../assets/images/azulAbstracto.jpg);
+
+}
+
+.botCont:hover {
+    background-image: none;
+}
+
+.botText:hover {
+    color: #000000;
+    text-decoration: none;
+    font-size: 1.8rem;
+}
+
+.redondoB {
+    border-radius: 2rem;
+}
+
+.contTitEvent {
+    height: auto;
+    position: relative;
+    display: flex;
+    justify-content: right;
+    margin-top: 3rem;
+    margin-right: 10rem;
+    background-color: #2823285a;
+    box-shadow: 2px 2px 4px rgba(193, 171, 171, 0.5);
+}
+
+.titEvent {
+    color: aliceblue;
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.estModal {
+    color: rgba(0, 0, 0);
+}
